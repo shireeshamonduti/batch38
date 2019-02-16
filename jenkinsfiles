@@ -1,11 +1,9 @@
-Pipeline{
+Node(‘remote’){
 
-Agent any 
-   stage('Preparation') {
-      git 'https://github.com/sudhakar1981/maven-project-web.git'
-}
-   stage('Build') {
+         Git url: 'https://github.com/sudhakar1981/maven-project-web.git'
+
+   stage('Build') { 
+	def mvnHome = tool 'apache-maven-3.5.3'
          sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
       } 
 }
-
