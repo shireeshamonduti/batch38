@@ -1,6 +1,5 @@
-Pipeline{
+node{
 
-Agent any 
    stage('Preparation') {
       git 'https://github.com/sudhakar1981/maven-project-web.git'
 }
