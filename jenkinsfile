@@ -1,13 +1,8 @@
 pipeline {
 	agent any
-	environment {
-			branch='master'
-			scmurl='https://github.com/sudhakar1981/maven-project-web'
-			server port='8080'
-			deployment server='http://localhost:9090'
-		    }
+
 	stages {
 		stage('git checkout')
                 scmurl='https://github.com/sudhakar1981/maven-project-web'
 		}
-	}
+	}	
